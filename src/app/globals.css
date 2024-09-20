@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif; /* Consider moving this to tailwind.config.js */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Add additional custom utilities */
+  .transition-color {
+    transition: color 0.3s ease-in-out;
+  }
+
+  .shadow-custom {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Example custom responsive styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.875rem; /* Adjust body font size for mobile */
+  }
+}
+
